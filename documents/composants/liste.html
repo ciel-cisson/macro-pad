@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Macropad – Composants et Fournisseurs</title>
+  <style>
+    :root {
+      --bg: #0f1220;
+      --card: #171a2b;
+      --text: #e8ecf8;
+      --muted: #a9b3c9;
+      --accent: #7aa2ff;
+      --accent-2: #56d6c2;
+      --border: #2a2f4a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 24px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      background: linear-gradient(180deg, #0b0e18 0%, var(--bg) 100%);
+      color: var(--text);
+    }
+    header {
+      max-width: 960px; margin: 0 auto 24px auto;
+      display: grid; gap: 8px;
+    }
+    header h1 { margin: 0; font-size: 1.8rem; }
+    header p { margin: 0; color: var(--muted); }
+    .grid {
+      max-width: 960px; margin: 0 auto;
+      display: grid; gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .card h2 {
+      margin: 0 0 10px 0; font-size: 1.1rem;
+      color: var(--accent);
+    }
+    ul { list-style: none; padding-left: 0; margin: 0; display: grid; gap: 8px; }
+    li a {
+      display: inline-flex; gap: 8px; align-items: center;
+      padding: 8px 10px; border: 1px solid transparent; border-radius: 8px;
+      color: var(--text); text-decoration: none; background: #1d2138;
+    }
+    li a:hover { border-color: var(--accent); background: #202544; }
+    .tag {
+      font-size: 0.75rem; color: var(--muted); margin-left: auto;
+      padding: 2px 6px; border: 1px dashed var(--border); border-radius: 6px;
+    }
+    footer {
+      max-width: 960px; margin: 24px auto 0 auto; color: var(--muted); font-size: 0.9rem;
+    }
+    .note { margin-top: 8px; font-size: 0.85rem; color: var(--muted); }
+    .accent { color: var(--accent-2); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Macropad – Composants et fournisseurs</h1>
+  </header>
+
+  <main class="grid">
+
+    <!-- Switches / Touches -->
+    <section class="card">
+      <h2>Switches mécaniques</h2>
+      <ul>
+        <li><a href="#" target="_blank" rel="noopener">Switches MX (linéaires/tactiles/clicky) <span class="tag">ex: Gateron, Kailh</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Low-profile (Kailh Choc) <span class="tag">LP</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Encoche PCB/plate compatible <span class="tag">MX/Choc</span></a></li>
+      </ul>
+      <p class="note">Préciser le nombre de touches de votre macropad (ex: 3–12). Ajouter des ressorts si vous moddez.</p>
+    </section>
+
+    <!-- Keycaps -->
+    <section class="card">
+      <h2>Keycaps</h2>
+      <ul>
+        <li><a href="#" target="_blank" rel="noopener">Ensembles PBT/ABS profil OEM/Cherry <span class="tag">legendes</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Keycaps 1u, 2u, 3u personnalisés <span class="tag">tailles</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Keycaps low-profile pour Choc <span class="tag">LP</span></a></li>
+      </ul>
+    </section>
+
+    <!-- PCB / Carte -->
+    <section class="card">
+      <h2>PCB et microcontrôleur</h2>
+      <ul>
+        <li><a href="#" target="_blank" rel="noopener">PCB macropad (préfabriqué ou gerbers) <span class="tag">QMK/VIA</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Microcontrôleur RP2040 <span class="tag">ex: Pico, KB2040</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Pro Micro (ATmega32U4) <span class="tag">alternatif</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Soudure headers/connexions <span class="tag">pin headers</span></a></li>
+      </ul>
+      <p class="note">Choisir un MCU compatible QMK/VIA ou KMK/CircuitPython selon votre workflow.</p>
+    </section>
+
+    <!-- Diodes et passifs -->
+    <section class="card">
+      <h2>Diodes et passifs</h2>
+      <ul>
+        <li><a href="#" target="_blank" rel="noopener">Diodes 1N4148 pour matrice <span class="tag">through-hole/SMD</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Résistances (pour LED/encoders) <span class="tag">220–1k Ω</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Condensateurs (découplage) <span class="tag">100 nF</span></a></li>
+      </ul>
+    </section>
+
+    <!-- Éclairage / Écran -->
+    <section class="card">
+      <h2>LED et écrans</h2>
+      <ul>
+        <li><a href="#" target="_blank" rel="noopener">LED RGB adressables (WS2812B) <span class="tag">per-key/underglow</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Barres/strip LED 5V <span class="tag">underglow</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Écran OLED/I2C SPI (0.91–1.3") <span class="tag">statuts</span></a></li>
+      </ul>
+    </section>
+
+    <!-- Encodeurs / Boutons -->
+    <section class="card">
+      <h2>Encodeurs et boutons</h2>
+      <ul>
+        <li><a href="#" target="_blank" rel="noopener">Encodeur rotatif + knob <span class="tag">EC11/EC12</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Boutons poussoirs supplémentaires <span class="tag">macro dédiées</span></a></li>
+      </ul>
+    </section>
+
+    <!-- Châssis / Mécanique -->
+    <section class="card">
+      <h2>Boîtier et mécanique</h2>
+      <ul>
+        <li><a href="#" target="_blank" rel="noopener">Boîtier imprimé 3D / CNC / acrylique <span class="tag">fichiers STL/STEP</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Plate/PCB mount, top/bottom plate <span class="tag">aluminium/FR4</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Entretoises, visserie M2/M3 <span class="tag">set complet</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Pieds en silicone <span class="tag">anti-glisse</span></a></li>
+      </ul>
+    </section>
+
+    <!-- Connectique -->
+    <section class="card">
+      <h2>Connectique et câbles</h2>
+      <ul>
+        <li><a href="#" target="_blank" rel="noopener">Connecteur USB-C avec E-Marker si nécessaire <span class="tag">PCB</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Câble USB-C vers A/C <span class="tag">données + charge</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Fils, Dupont, gaine thermo <span class="tag">câblage</span></a></li>
+      </ul>
+    </section>
+
+    <!-- Outils -->
+    <section class="card">
+      <h2>Outillage et consommables</h2>
+      <ul>
+        <li><a href="#" target="_blank" rel="noopener">Fer à souder + embouts fins <span class="tag">T12/TS100/TS80</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Étain, flux, tresse à dessouder <span class="tag">sans-plomb/63-37</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Multimètre et ESD mat/bracelet <span class="tag">sécurité</span></a></li>
+      </ul>
+    </section>
+
+    <!-- Logiciel -->
+    <section class="card">
+      <h2>Firmware et ressources</h2>
+      <ul>
+        <li><a href="#" target="_blank" rel="noopener">QMK / VIA <span class="tag">config macropad</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">CircuitPython / KMK <span class="tag">RP2040-friendly</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener">Fichiers de keymap, docs projet <span class="tag">GitHub/Docs</span></a></li>
+      </ul>
+      <p class="note">Ajoute tes dépôts, guides d’assemblage et keymaps ici pour tout centraliser.</p>
+    </section>
+
+  </main>
+</body>
+</html>
