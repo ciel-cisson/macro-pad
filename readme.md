@@ -1,8 +1,8 @@
 **Présentation du Projet**
 
-Partie supérieure:
-<img src="images/cote composant.png" width="300"/>
+Partie Composants:
+<img src="images/cote composants.png" width="300"/>
 
-Partie inférieure:
+Partie Cuivre:
 <img src="images/cote cuivre.png" width="300"/>
 
