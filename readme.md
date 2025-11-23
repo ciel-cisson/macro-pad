@@ -6,3 +6,5 @@ Partie Composants 3D
 Partie Cuivre 3D
 <img src="circuit-imprime/cote cuivre 3D.png" width="300"/>
 
+
+👉 [Liste des composants](documents/composants/liste.html)
